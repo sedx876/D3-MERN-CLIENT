@@ -6,7 +6,7 @@ import Character from '../components/Character'
 const HomeScreen = () => {
   return (
     <>
-      <h1 className='text-primary text-center'>Latest Character Builds</h1>
+      <h1 className='my-2 py-2 text-primary text-center'>Latest Character Builds</h1>
       <Row>
         {characters.map((character) => (
           <Col sm={12} md={6} lg={4} xl={3}>
