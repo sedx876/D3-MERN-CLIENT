@@ -1,13 +1,21 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { Row, Col, Image, ListGroup, Card, Button } from 'react-bootstrap'
 import Rating from '../components/Rating'
-import characters from '../characters'
-import { match } from 'assert'
+import axios from 'axios'
 
 
 const CharacterScreen = ({match}) => {
-  const character = characters.find(c => c._id === match.params.id)
+  const [character, setCharacter] = useState({})
+
+
+  useEffect(() => {
+    const fetchCharacter = async () => {
+      const { data } = await axios.get(`/api/characters/${match.params.id}`)
+      setCharacter(data)
+    }
+    fetchCharacter()
+  }, [])
 
   return (
     <>
