@@ -20,7 +20,7 @@ const characters = [
     kanaisCube: 'Dawn::Convention of Elements::Visage of Gunes',
     activeSkills: 'MultiShot',
     passiveSkills: 'Ballistics',
-    generalBuildNotes: 'Change Belt',
+    generalBuildNotes: 'Tart jelly-o tart biscuit cotton candy I love candy canes. Pastry caramels dessert caramels cake brownie cookie halvah jelly beans. Marzipan dessert ice cream bonbon I love I love chocolate cake I love tart. I love candy canes chocolate bar marzipan. Tootsie roll sweet roll caramels cake sugar plum. Marzipan halvah sweet marshmallow biscuit ice cream muffin gummies. Oat cake jelly jelly I love. Cheesecake toffee lemon drops croissant bear claw danish biscuit I love topping. Topping biscuit sweet roll I love caramels. Tootsie roll candy pastry. Sweet roll tootsie roll lollipop pie chocolate cake biscuit bonbon topping. I love tiramisu tart marshmallow pie tootsie roll wafer liquorice gummies.',
     image: '/images/ue.jpg',
     rating: '5',
     numReviews: '200'
@@ -47,7 +47,7 @@ const characters = [
     activeSkills: 'Mouthy',
     passiveSkills: 'Bipolar',
     generalBuildNotes: 'Change Everything',
-    image: 'images/necro.jpg',
+    image: '/images/necro.jpg',
     rating: '3.6',
     numReviews: '146'
   },
@@ -73,7 +73,7 @@ const characters = [
     activeSkills: 'Ignorance',
     passiveSkills: 'NonCompliant',
     generalBuildNotes: 'Keep It',
-    image: 'images/cru.jpg',
+    image: '/images/cru.jpg',
     rating: '4.3',
     numReviews: '900'
   },
@@ -99,7 +99,7 @@ const characters = [
     activeSkills: 'Sarcasm',
     passiveSkills: 'Pewps',
     generalBuildNotes: 'More Pewps',
-    image: 'images/wiz.jpg',
+    image: '/images/wiz.jpg',
     rating: '1.2',
     numReviews: '300'
   },
@@ -125,7 +125,7 @@ const characters = [
     activeSkills: 'Stuff',
     passiveSkills: 'Stuff',
     generalBuildNotes: 'Stuff',
-    image: 'images/lil.jpg',
+    image: '/images/lil.jpg',
     rating: '.5',
     numReviews: '9000'
   },

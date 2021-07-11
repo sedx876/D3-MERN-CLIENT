@@ -2,6 +2,7 @@ import React from 'react'
 import { Nav, 
          Navbar, 
          Container } from 'react-bootstrap'
+         import { FaHome } from "react-icons/fa";
 
 const Header = () => {
   return (
@@ -11,8 +12,10 @@ const Header = () => {
         <Navbar.Brand href="#home">D3PlayrPad</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
-              <Nav className="mr-auto">
-                <Nav.Link href="#home">Home</Nav.Link>
+              <Nav className="text-center">
+                <Nav.Link href="#home">
+                <FaHome/>
+                  Home</Nav.Link>
                 <Nav.Link href="#link">
                   <i className='fas fa-user'></i>
                   Sign In

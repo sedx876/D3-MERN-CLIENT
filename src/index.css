@@ -1,7 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap'); */
 
 *{
-  font-family: 'Special Elite', cursive;
+  /* font-family: 'Special Elite', cursive; */
+  /* font-family: 'Stint Ultra Condensed', cursive; */
+  font-family: 'Ubuntu Mono', monospace;
 }
 
 
@@ -34,7 +36,7 @@ h4{
 }
 
 #cTitle{
-  letter-spacing: 2px;
+  letter-spacing: 3px;
 }
 
 a:visited{
@@ -43,4 +45,18 @@ a:visited{
 
 a:link{
   text-decoration: none;
+}
+
+#charhead{
+  letter-spacing: 3px;
+  color: #3cf281;
+}
+
+#charTitle{
+  color: #ea39b8;
+  letter-spacing: 2px;;
+}
+
+p{
+  letter-spacing: 1px;
 }
