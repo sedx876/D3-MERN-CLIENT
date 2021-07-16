@@ -49,14 +49,20 @@ a:link{
 
 #charhead{
   letter-spacing: 3px;
-  color: #3cf281;
+  /* color: #3cf281; */
 }
 
 #charTitle{
-  color: #ea39b8;
+  /* color: #ea39b8; */
   letter-spacing: 2px;;
 }
 
 p{
   letter-spacing: 1px;
+}
+
+#logoHead{
+  color: #170229;
+  letter-spacing: 2px;
+  margin: 5px;
 }

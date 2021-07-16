@@ -15,7 +15,7 @@ const CharacterScreen = ({match}) => {
       setCharacter(data)
     }
     fetchCharacter()
-  }, [])
+  }, [match])
 
   return (
     <>

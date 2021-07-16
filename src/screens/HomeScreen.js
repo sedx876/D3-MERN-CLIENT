@@ -17,10 +17,21 @@ const HomeScreen = () => {
 
   return (
     <>
+
       <h1 
+        className='text-center text-success'>
+          Welcome to D3PlayrPad
+      </h1>
+
+      <p 
+        className='text-center text-warning'>
+          Keep track of all your Diablo 3 builds and other in-game essentials!
+      </p>
+
+      <h3 
         className='my-2 py-2 text-primary text-center'>
           Latest Character Builds
-      </h1>
+      </h3>
 
       <Row>
         {characters.map((character) => (

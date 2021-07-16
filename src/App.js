@@ -5,6 +5,7 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import HomeScreen from './screens/HomeScreen'
 import CharacterScreen from './screens/CharacterScreen'
+import Character from './components/Character'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Container>
         <Route path='/' component={HomeScreen} exact />
         <Route path='/character/:id' component={CharacterScreen} />
+        {/* <Route path='/character' component={Character} /> */}
         </Container>
       </main>
       
