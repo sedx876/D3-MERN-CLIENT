@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { Row, Col } from 'react-bootstrap'
 import Character from '../components/Character'
 import Loader from '../components/Loader'
+import Message from '../components/Message'
 import { listCharacters } from '../actions/characterActions'
 
 const HomeScreen = ({match}) => {
@@ -37,7 +38,7 @@ const HomeScreen = ({match}) => {
        {loading ? 
        (<Loader/>)
         : error ? (
-          <h1>{error}</h1>
+          <Message variant='danger'>{error}</Message>
         ) : (
           <Row>
             {characters.map((character) => (
