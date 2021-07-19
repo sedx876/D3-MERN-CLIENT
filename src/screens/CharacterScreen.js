@@ -5,8 +5,10 @@ import Rating from '../components/Rating'
 import axios from 'axios'
 
 
+
 const CharacterScreen = ({match}) => {
   const [character, setCharacter] = useState({})
+  const [user, setUser] = useState({})
 
 
   useEffect(() => {
@@ -15,6 +17,14 @@ const CharacterScreen = ({match}) => {
       setCharacter(data)
     }
     fetchCharacter()
+  }, [match])
+
+  useEffect(() => {
+    const fetchUser = async () => {
+      const { data } = await axios.get(`/api/users/${match.params.id}`)
+      setUser(data)
+    }
+    fetchUser()
   }, [match])
 
   return (
@@ -29,7 +39,7 @@ const CharacterScreen = ({match}) => {
 
         <Col md={6}>
           <Image src={character.image} alt={character.title} fluid/>
-          <ListGroup.Item>UserName</ListGroup.Item>
+          <ListGroup.Item>UserName: {user.name}</ListGroup.Item>
           <ListGroup.Item>Joined: </ListGroup.Item>
           <ListGroup.Item>
             <div>

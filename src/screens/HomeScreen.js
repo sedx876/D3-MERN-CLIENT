@@ -25,7 +25,7 @@ const HomeScreen = () => {
 
       <p 
         className='text-center text-warning'>
-          Keep track of all your Diablo 3 builds and other in-game essentials!
+          Keep track of all your Diablo 3 character builds and other in-game essentials!
       </p>
 
       <h3 

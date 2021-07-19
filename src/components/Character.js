@@ -19,12 +19,12 @@ const Character = ({character}) => {
       </Link>
 
       <Card.Text as='div'>
-        <div className='my-3'>
+        <div className=''>
         <Rating value={character.rating} text={`${character.numReviews} reviews`}/>
         </div>
       </Card.Text>
 
-      <Card.Text as='h4' class="text-success">
+      <Card.Text as='h4' class="text-success text-center">
         {character.characterKlass}
       </Card.Text>
       </Card.Body>

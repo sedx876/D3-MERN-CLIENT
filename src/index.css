@@ -3,7 +3,8 @@
 *{
   /* font-family: 'Special Elite', cursive; */
   /* font-family: 'Stint Ultra Condensed', cursive; */
-  font-family: 'Ubuntu Mono', monospace;
+  /* font-family: 'Ubuntu Mono', monospace; */
+  font-family: 'Gamja Flower', cursive;
 }
 
 
@@ -20,10 +21,13 @@ main{
 .card-img{
   height: 150px;
   width: 100px;
+  padding: 5px;
+  border-radius: 50%;
 }
 
 h4{
   padding: 1rem 0;
+  margin-bottom: 5px;
 }
 
 .rating span {
@@ -33,6 +37,7 @@ h4{
 .card{
   height: 375px;
   width: 200px;
+  margin-bottom: 5px;
 }
 
 #cTitle{
@@ -49,11 +54,12 @@ a:link{
 
 #charhead{
   letter-spacing: 3px;
-  /* color: #3cf281; */
+  color: #3cf281;
+  text-decoration: underline;
 }
 
 #charTitle{
-  /* color: #ea39b8; */
+  color: #ea39b8;
   letter-spacing: 2px;;
 }
 
@@ -62,7 +68,11 @@ p{
 }
 
 #logoHead{
-  color: #170229;
+  color: #ea39b8;
   letter-spacing: 2px;
   margin: 5px;
+}
+
+#foot{
+  font-size: 15px;
 }
