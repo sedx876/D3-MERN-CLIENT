@@ -1,19 +1,21 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import { Row, Col } from 'react-bootstrap'
 import Character from '../components/Character'
-import axios from 'axios'
+import Loader from '../components/Loader'
+import { listCharacters } from '../actions/characterActions'
 
-const HomeScreen = () => {
-  const [characters, setCharacters] = useState([])
+const HomeScreen = ({match}) => {
+  const dispatch = useDispatch()
+  const characterList = useSelector((state) => state.characterList)
+  const { loading, error, characters } = characterList
 
   //will run as soon as component loads
   useEffect(() => {
-    const fetchCharacters = async () => {
-      const { data } = await axios.get('/api/characters')
-      setCharacters(data)
-    }
-    fetchCharacters()
-  }, [])
+    dispatch(listCharacters())
+  }, [dispatch])
+
+  
 
   return (
     <>
@@ -32,17 +34,21 @@ const HomeScreen = () => {
         className='my-2 py-2 text-primary text-center'>
           Latest Character Builds
       </h3>
-
-      <Row>
-        {characters.map((character) => (
-          <Col sm={12} md={6} lg={4} xl={3}>
-            <Character 
-              className='text-secondary' 
-              character={character}
-            />
-          </Col>
-        ))}
-      </Row>
+       {loading ? 
+       (<Loader/>)
+        : error ? (
+          <h1>{error}</h1>
+        ) : (
+          <Row>
+            {characters.map((character) => (
+              <Col key={character._id} sm={12} md={6} lg={4} xl={3}>
+                <Character character={character}/>
+              </Col>
+            ))}
+          </Row>
+        )
+      }
+      
     </>
   )
 }

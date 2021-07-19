@@ -14,7 +14,7 @@ export const characterListReducer = (state = { characters: []}, action) => {
     case CHARACTER_LIST_SUCCESS:
       return {
         loading: false,
-        characters: action.payload.characters
+        characters: action.payload.characters,
       }
     case CHARACTER_LIST_FAIL:
       return { loading: false, error: action.payload }
