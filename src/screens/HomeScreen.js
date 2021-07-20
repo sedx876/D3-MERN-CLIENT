@@ -20,8 +20,7 @@ const HomeScreen = ({match}) => {
 
   return (
     <>
-
-      <h1 
+    <h1 
         className='text-center text-success'>
           Welcome to D3PlayrPad
       </h1>
@@ -35,22 +34,22 @@ const HomeScreen = ({match}) => {
         className='my-2 py-2 text-primary text-center'>
           Latest Character Builds
       </h3>
-       {loading ? 
-       (<Loader/>)
-        : error ? (
-          <Message variant='danger'>{error}</Message>
-        ) : (
-          <Row>
-            {characters.map((character) => (
-              <Col key={character._id} sm={12} md={6} lg={4} xl={3}>
-                <Character character={character}/>
-              </Col>
-            ))}
-          </Row>
-        )
-      }
-      
-    </>
+    {loading ? (
+      <Loader />
+    ) : error ? (
+      <Message variant='danger'>{error}</Message>
+    ) : (
+      <>
+        <Row>
+          {characters.map((character) => (
+            <Col key={character._id} sm={12} md={6} lg={4} xl={3}>
+              <Character character={character} />
+            </Col>
+          ))}
+        </Row>
+      </>
+    )}
+  </>
   )
 }
 

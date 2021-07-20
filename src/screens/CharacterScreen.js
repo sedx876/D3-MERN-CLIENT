@@ -1,31 +1,31 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux'
 import { Row, Col, Image, ListGroup, Card, Button } from 'react-bootstrap'
 import Rating from '../components/Rating'
-import axios from 'axios'
+import Message from '../components/Message'
+import Loader from '../components/Loader'
+import {
+  listCharacterDetails,
+} from '../actions/characterActions'
+
 
 
 
 const CharacterScreen = ({match}) => {
-  const [character, setCharacter] = useState({})
-  const [user, setUser] = useState({})
+  
+  const dispatch = useDispatch()
 
-
-  useEffect(() => {
-    const fetchCharacter = async () => {
-      const { data } = await axios.get(`/api/characters/${match.params.id}`)
-      setCharacter(data)
-    }
-    fetchCharacter()
-  }, [match])
+  const characterDetails = useSelector((state) => state.characterDetails)
+  const { loading, error, character } = characterDetails
 
   useEffect(() => {
-    const fetchUser = async () => {
-      const { data } = await axios.get(`/api/users/${match.params.id}`)
-      setUser(data)
+    if (!character._id || character._id !== match.params.id){
+      dispatch(listCharacterDetails(match.params.id))
     }
-    fetchUser()
-  }, [match])
+  }, [dispatch, match])
+
+  
 
   return (
     <>
@@ -34,12 +34,16 @@ const CharacterScreen = ({match}) => {
         to='/'>
           Go Back
       </Link>
-      
-      <Row>
+      {loading ? 
+        <Loader/> 
+        : error ? 
+        <Message variant='danger'>{error}</Message> 
+        : (
+        <Row>
 
         <Col md={6}>
           <Image src={character.image} alt={character.title} fluid/>
-          <ListGroup.Item>UserName: {user.name}</ListGroup.Item>
+          <ListGroup.Item>UserName: </ListGroup.Item>
           <ListGroup.Item>Joined: </ListGroup.Item>
           <ListGroup.Item>
             <div>
@@ -209,6 +213,8 @@ const CharacterScreen = ({match}) => {
         </Col>
 
       </Row>
+      )}
+      
     </>
   )
 }
