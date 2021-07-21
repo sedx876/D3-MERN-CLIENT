@@ -33,10 +33,11 @@ const Header = () => {
                 </LinkContainer> */}
                 
                 
-                <Nav.Link href="#link">
-                  <i className='fas fa-user'></i>
-                  Sign In
-                </Nav.Link>
+                <LinkContainer to='/login'>
+                  <Nav.Link>
+                    <i className='fas fa-user'></i> Sign In
+                  </Nav.Link>
+                </LinkContainer>
             </Nav>
           </Navbar.Collapse>
         </Navbar>

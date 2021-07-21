@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { Card } from 'react-bootstrap'
 import Rating from './Rating'
 
-const Character = ({character}) => {
+const Character = ({character, user}) => {
   return (
     <Card className='my-2 py-2 rounded card border-secondary'>
 
@@ -32,7 +32,7 @@ const Character = ({character}) => {
       </Card.Text>
 
       <Card.Text as='p' class="text-secondary text-center">
-        Built By: UserName
+        Built By: 
       </Card.Text>
 
       </Card.Body>
