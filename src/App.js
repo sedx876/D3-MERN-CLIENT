@@ -5,6 +5,7 @@ import Footer from './components/Footer'
 import HomeScreen from './screens/HomeScreen'
 import CharacterScreen from './screens/CharacterScreen'
 import LoginScreen from './screens/LoginScreen'
+import RegisterScreen from './screens/RegisterScreen'
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <Route exact path='/' component={HomeScreen}/>
           <Route path='/character/:id' component={CharacterScreen}/>
           <Route path='/login' component={LoginScreen} />
+          <Route path='/register' component={RegisterScreen} />
         </Container>
       </main>
       
