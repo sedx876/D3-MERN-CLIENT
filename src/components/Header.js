@@ -11,7 +11,7 @@ const Header = () => {
       {/* <Container> */}
       <Navbar variant='light' bg='light'  expand="lg" collapseOnSelect>
         <LinkContainer to='/'>
-          <Navbar.Brand id='logoHead'>D3PlayrPad</Navbar.Brand>
+          <Navbar.Brand id='logoHead'>👹D3PlayrPad</Navbar.Brand>
         </LinkContainer>
         
           <Navbar.Toggle aria-controls="basic-navbar-nav" />

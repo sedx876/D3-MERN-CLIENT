@@ -22,7 +22,7 @@ const HomeScreen = ({match}) => {
     <>
     <h1 
         className='text-center text-success'>
-          Welcome to D3PlayrPad
+          ⚔️Welcome to D3PlayrPad⚔️
       </h1>
 
       <p 

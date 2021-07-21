@@ -200,13 +200,6 @@ const CharacterScreen = ({match}) => {
             </div>
           </ListGroup.Item>
 
-          {/* <ListGroup.Item>
-            <div>
-            <h6 id='charhead'><strong>General Build Notes: </strong></h6>
-            <p>{character.generalBuildNotes}</p>
-            </div>
-          </ListGroup.Item> */}
-
 
           </ListGroup>
 

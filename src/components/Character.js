@@ -8,7 +8,7 @@ const Character = ({character}) => {
     <Card className='my-2 py-2 rounded card border-secondary'>
 
       <Link to={`/character/${character._id}`}>
-        <Card.Img id='cardImg' class="card-img" src={character.image} variant='top'/>
+        <Card.Img id='cardImg' class="card-img" src={character.image} />
       </Link>
 
       <Card.Body>
@@ -20,13 +20,21 @@ const Character = ({character}) => {
 
       <Card.Text as='div'>
         <div className=''>
-        <Rating value={character.rating} text={`${character.numReviews} reviews`}/>
+        <Rating 
+          value={character.rating} 
+          text={`${character.numReviews} reviews`}
+        />
         </div>
       </Card.Text>
 
       <Card.Text as='h4' class="text-success text-center">
         {character.characterKlass}
       </Card.Text>
+
+      <Card.Text as='p' class="text-secondary text-center">
+        Built By: UserName
+      </Card.Text>
+
       </Card.Body>
     </Card>
   )
